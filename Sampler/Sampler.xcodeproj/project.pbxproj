@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9155A30184F8F50004B2876 /* Coroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = C9155A2F184F8F50004B2876 /* Coroutine.m */; };
 		C9FE8B341848D7F300860689 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FE8B331848D7F300860689 /* Foundation.framework */; };
 		C9FE8B361848D7F300860689 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FE8B351848D7F300860689 /* CoreGraphics.framework */; };
 		C9FE8B381848D7F300860689 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FE8B371848D7F300860689 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9155A2E184F8F50004B2876 /* Coroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coroutine.h; sourceTree = "<group>"; };
+		C9155A2F184F8F50004B2876 /* Coroutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coroutine.m; sourceTree = "<group>"; };
 		C9FE8B301848D7F300860689 /* Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE8B331848D7F300860689 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9FE8B351848D7F300860689 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 				C9FE8B561848D7F300860689 /* Images.xcassets */,
 				C9FE8B4D1848D7F300860689 /* Sampler.xcdatamodeld */,
 				C9FE8B3C1848D7F300860689 /* Supporting Files */,
+				C9155A2E184F8F50004B2876 /* Coroutine.h */,
+				C9155A2F184F8F50004B2876 /* Coroutine.m */,
 			);
 			path = Sampler;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				C9FE8B521848D7F300860689 /* MasterViewController.m in Sources */,
 				C9FE8B4F1848D7F300860689 /* Sampler.xcdatamodeld in Sources */,
 				C9FE8B461848D7F300860689 /* AppDelegate.m in Sources */,
+				C9155A30184F8F50004B2876 /* Coroutine.m in Sources */,
 				C9FE8B421848D7F300860689 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +496,7 @@
 				C9FE8B701848D7F400860689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9FE8B711848D7F400860689 /* Build configuration list for PBXNativeTarget "SamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				C9FE8B731848D7F400860689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

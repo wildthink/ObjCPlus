@@ -50,10 +50,39 @@ see <http://clang.llvm.org/docs/ObjectiveCLiterals.html>
 
 
 ### Coroutines
-	while (true) {
-        NSLog (@"Name: %s", _name_);
-        YIELD (idx);
-        _name_ = "L_93"; _next_ = && L_93; return (idx); L_93:;
-        YIELD (10* idx);
-        _name_ = "L_94"; _next_ = && L_94; return (10* idx); L_94:;
+	-(void)alert
+	{
+	    id result;
+	    BEGIN_COROUTINE();
+	    
+	    [[[UIAlertView alloc] initWithTitle:@"Alert One"
+	                                message:@"This is a message"
+	                               delegate:self
+	                      cancelButtonTitle:@"Cancel"
+	                      otherButtonTitles:@"OK", nil]
+	     show];
+	    
+	    YIELD();
+	    result = RETURN_VALUE;
+	    
+	    NSLog(@"Alert returns %@", result);
+	    
+	    [[[UIAlertView alloc] initWithTitle:@"Alert Two"
+	                                message:@"This is a message"
+	                               delegate:self
+	                      cancelButtonTitle:@"Cancel"
+	                      otherButtonTitles:@"OK", nil]
+	     show];
+	    
+	    YIELD();
+	    result = RETURN_VALUE;
+	    
+	    NSLog(@"Alert returns %@", result);
+	    
+	    END_COROUTINE();
+	}
+	
+	- (void)alertView:(UIAlertView *)alertView 		didDismissWithButtonIndex:(NSInteger)buttonIndex
+	{
+	    [self resumeCoroutineForMethod:@selector(alert) 		returnValue:@(buttonIndex)];
 	}
